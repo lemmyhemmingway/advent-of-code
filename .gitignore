@@ -1,0 +1,11 @@
+# Language-specific
+target/
+*.exe
+__pycache__/
+*.pyc
+.venv/
+venv/
+_build/
+.elixir_ls/
+.erl_crash.dump
+*.beam
