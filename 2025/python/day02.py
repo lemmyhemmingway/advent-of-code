@@ -4,8 +4,7 @@ def part1(input_data: str) -> int:
         x, y = d.split("-")
         for num in range(int(x), int(y) + 1):
             str_num = str(num)
-            if len(str_num) % 2 == 0:
-                if str_num[:len(str_num) // 2] == str_num[len(str_num) // 2:]:
+            if len(str_num) % 2 == 0 and str_num[:len(str_num) // 2] == str_num[len(str_num) // 2:]:
                     total += num
     return total
 
