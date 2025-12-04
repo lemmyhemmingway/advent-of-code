@@ -1,7 +1,8 @@
 package main
 
 import (
-	"flag"
+	"aoc2025/day1"
+	"aoc2025/day2"
 	"fmt"
 	"log"
 	"os"
@@ -14,7 +15,7 @@ func main() {
 	}
 
 	day := os.Args[1]
-	inputPath := filepath.Join("..", "inputs", fmt.Sprintf("day%s.txt", day))
+	inputPath := filepath.Join("..", "inputs", fmt.Sprintf("day0%s.txt", day))
 	input, err := os.ReadFile(inputPath)
 	if err != nil {
 		log.Fatalf("Could not read %s: %v", inputPath, err)
@@ -23,30 +24,14 @@ func main() {
 	inputStr := string(input)
 
 	switch day {
-	case "01":
-		fmt.Printf("Part 1: %s\n", Day01Part1(inputStr))
-		fmt.Printf("Part 2: %s\n", Day01Part2(inputStr))
-	case "02":
-		fmt.Printf("Part 1: %s\n", Day02Part1(inputStr))
-		fmt.Printf("Part 2: %s\n", Day02Part2(inputStr))
+	case "1":
+		fmt.Printf("Part 1: %s\n", day1.Part1(inputStr))
+		fmt.Printf("Part 2: %s\n", day1.Part2(inputStr))
+	case "2":
+		fmt.Printf("Part 1: %s\n", day2.Part1(inputStr))
+		fmt.Printf("Part 2: %s\n", day2.Part2(inputStr))
 	default:
 		log.Fatalf("Day %s not implemented", day)
 	}
 }
 
-// Day solutions
-func Day01Part1(input string) string {
-	return "TODO"
-}
-
-func Day01Part2(input string) string {
-	return "TODO"
-}
-
-func Day02Part1(input string) string {
-	return "TODO"
-}
-
-func Day02Part2(input string) string {
-	return "TODO"
-}
